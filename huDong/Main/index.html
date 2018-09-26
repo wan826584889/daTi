@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>海丝达人秀</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 16 + 'px';
+        window.onload=function(){
+        window.onresize = function () {
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 16 + 'px';
+        };
+    }
+</script>
+<body>
+    <div class="main">
+        <ul class="header">
+            <li class="active">首页</li>
+            <li>攻略</li>
+        </ul>
+        <div class="logo"></div>
+        <div class="user_msg">
+            <div class="scroll">
+                中奖信息
+            </div>
+        </div>
+        <div class="anTitle">
+            <span class="anLogo"></span>
+            <span class="participateNum">参与人数: <b>5000</b></span>
+        </div>
+        <div class="anCont" id="chartContainer">
+
+        </div>
+    </div>
+</body>
+<script src="./js/canvasjs.min.js"></script>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/index.js"></script>
+</html>
