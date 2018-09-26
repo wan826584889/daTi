@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>复活卡详情</title>
+    <link rel="stylesheet" href="../css/fhk.min.css">
+</head>
+<script>
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 16 + 'px';
+            window.onload=function(){
+            window.onresize = function () {
+                document.documentElement.style.fontSize = document.documentElement.clientWidth / 16 + 'px';
+            };
+        }
+</script>
+<body>
+    <h1><span>复活卡</span></h1>
+    <div class="main">
+        <dl>
+            <dd>
+                <img src="../images/all.png" alt="">
+                <dt>获取数<span class="all_num"> 0 张</span></dt>
+            </dd>
+        </dl>
+        <dl>
+            <dd>
+                <img src="../images/have.png" alt="">
+                <dt>使用<span class="used_num"> 0 张</span></dt>
+            </dd>
+        </dl>
+        <dl>
+            <dd>
+                <img src="../images/used.png" alt="">
+                <dt>剩余<span class="have_num"> 0 张</span></dt>
+            </dd>
+        </dl>
+    </div>
+    <div class="btn">
+            获取
+    </div>
+    <div class="introduce">
+        <p>介绍:</p>
+        <p class="answer_cont"></p>
+    </div>
+    <div class="wrap">
+        <div class="cont">
+            <div class="shop">购买</div>
+            <div class="yq">邀请好友</div>
+        </div>
+    </div>
+</body>
+<script src="../js/jquery.min.js"></script>
+<script>
+    // 获取token
+    var token = '';
+    // var token ='d232109269dc27c7593e6d1f341f4f1f69d8f0d59eb81b3555078ef3d481e60d';
+    if(/(LKHDAPP)/i.test(navigator.userAgent)){
+        if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+            token=YSHD.token;
+        }else if (/(Android)/i.test(navigator.userAgent)) { 
+            token=window.LkhdWebView.getToken();
+        }
+    }else{
+        if(window.location.search.length>=10){
+            var href_ = window.location.search.split('?')[1].split('&');
+            for(var i=0;i<href_.length;i++){
+                var item=href_[i].split('=');
+                if(item[0]=="token"){
+                    token=item[1];
+                }
+            }
+        }
+    }
+window.onload = function () {
+    $.ajax({
+        url: "https://miniprogram.lingkehudong.com/payment/getmypropslist",
+        contentType:"application/json",
+        dataType:"json",
+        type: "post",
+        data:JSON.stringify({
+            token:token,
+            data:5
+        }),
+        success: function (res) {
+            if(res.data.length>0){
+                var have_num = res.data[0].number;
+                var used_num = res.data[0].useNum;
+                // var all_num = res.data[0].
+                $('.have_num').html(`${have_num}张`)
+                $('.used_num').html(`${used_num}张`)
+                $('.all_num').html(`${used_num+have_num}张`)
+                $('.answer_cont').html(`${res.data[0].resume}`)
+            }
+        }
+    });
+
+
+    $('.btn').on('click',function () {
+        // event.stopPropagation()
+        $('.wrap').toggle()
+    })
+    $('.wrap').on('click',function () {
+        $('.wrap').toggle()
+    })
+    $('.yq').on('click',function () {
+        window.location.href = '../../dtyq/yqjs.html'
+    })
+
+    // 调用app端
+    $('.shop').on('click',function () {
+        share();//购买
+    })
+}
+    function share(){
+        if (/(LKHDAPP)/i.test(navigator.userAgent)) {
+            if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+                shop();
+            }else if (/(Android)/i.test(navigator.userAgent)) { 
+                window.LkhdWebView.shop();
+            }
+        }
+    }
+
+</script>
+</html>

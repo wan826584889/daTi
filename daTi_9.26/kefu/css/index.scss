@@ -1,0 +1,113 @@
+@function n($a){
+    @return $a/46.875+rem;
+}
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;  
+}
+.box{
+    width:100%;
+    height:100%;
+    padding-top: n(20);
+    background: #f4f4f4;
+    box-sizing: border-box;
+}
+.box_{
+    width: 100%;
+    height: 90%;
+    overflow-y: scroll;
+    margin-bottom: n(80);
+    background: #f4f4f4;
+    .left{
+        width: 95%;
+        height: n(205);
+        margin-left: n(20);
+        margin-bottom: n(30);
+        span{
+            font-size: n(27);
+            color: #909090;
+            margin-left: n(30);
+        }
+        p{
+            max-width: n(490);;
+            margin-top: n(5);
+            height: auto;
+            padding: n(31);
+            background-color: #fff;
+            font-size: n(26);
+            font-weight: bold;
+        }
+    }
+    .right{
+        width: 95%;
+        height: n(205);
+        position: relative;
+        span{
+            font-size: n(27);
+            color: #909090;
+            position: absolute;
+            right: n(20);
+            top: 0;
+        }
+        p{
+            max-width: n(490);
+            margin-top: n(5);
+            height: auto;
+            padding: n(31);
+            background-color: #fff;
+            font-size: n(26);
+            font-weight: bold;
+            position: absolute;
+            top: n(40);
+            right: n(0)
+        }
+    }
+}
+.time{
+    width: 100%;
+    height: n(50);
+    color: #c2c2c2;
+    font-size: n(22);
+    text-align: center;
+}
+footer{
+    width: 100%;
+    height: n(103);
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    textarea{
+        width: n(584);
+        height: n(90);
+        border: none;
+        border-bottom: 1px solid #c2c2c2;
+        font-size: n(27);
+        padding-top: n(30);
+        box-sizing: border-box;
+        padding-left: n(20);
+        margin-left: n(20);
+        outline: none;
+    }
+    button{
+        width: n(92);
+        height: n(62);
+        background: #dcdcdc;
+        border: none;
+        outline: none;
+        font-size: n(30);
+        position: absolute;
+        top: n(20);
+        right:n(20);
+        color: #fff;
+    }
+}
+.action{
+    background: #45267f;
+    color: #fff;
+}

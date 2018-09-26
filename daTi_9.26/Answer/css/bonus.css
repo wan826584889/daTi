@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.64rem;
+}
+
+html, body {
+  height: 100%;
+}
+
+h1 {
+  font-weight: 400;
+  line-height: 3.2rem;
+  text-indent: 0.64rem;
+}
+
+ul li {
+  display: flex;
+  width: 12.8rem;
+  margin: 0 auto;
+  line-height: 1.49333rem;
+}
+
+ul li span {
+  flex: 1;
+  text-align: center;
+  border: 0.04267rem solid #EAEAEA;
+  color: #616161;
+}
+
+ul li span:nth-child(even) {
+  color: #E8B20A;
+  position: relative;
+}
+
+ul li span:nth-child(even):before {
+  content: '';
+  background-image: url("../images/bonus.png");
+  display: inline-block;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 0.46933rem;
+  height: 0.59733rem;
+  position: absolute;
+  top: 0.448rem;
+  left: 1.70667rem;
+}
+
+ul li span:nth-child(odd) {
+  border-right: 0;
+}
+
+ul li:nth-child(n+2) span {
+  border-top: 0;
+}
+
+h2 {
+  font-weight: 400;
+  float: right;
+  margin-right: 1.06667rem;
+  color: #FF6C38;
+  font-size: 0.68267rem;
+  margin-top: 0.64rem;
+}
+
+h2 span {
+  margin: 0 0.128rem;
+  font-size: 0.704rem;
+}

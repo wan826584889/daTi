@@ -1,0 +1,39 @@
+@function n($a){
+    @return $a/40+rem;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    width: 100%;
+    height: n(1301);
+    background: url(../images/bg2.png) no-repeat;
+    background-size:100% n(1301)
+}
+img{
+    width:n(250);
+    height: n(250);
+    position: absolute;
+    top: n(830);
+    border: 1px solid #ccc;
+    padding: n(15);
+    left: n(30);
+}
+.right{
+    position: absolute;
+    top: n(870);
+    left: n(330);
+    color: #fff;
+    font-size: n(32);
+    line-height: n(60)
+}
+.box{
+    font-family: '黑体', Courier, monospace;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: n(95);
+    left: n(300);
+    font-size: n(65);
+}

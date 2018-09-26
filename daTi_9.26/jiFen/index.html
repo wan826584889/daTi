@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>海丝达人秀</title>
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 16 + 'px';
+        window.onload=function(){
+        window.onresize = function () {
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 16 + 'px';
+        };
+    }
+</script>
+
+<body>
+    <div class="main">
+            <div class="banner swiper-container">
+            <div class="swiper-wrapper banner_imgList">
+                
+            </div>
+            
+        </div>
+        <div class="title">
+            手机同步答题赢大奖
+            <img src="./images/rule_bg.png" alt="" class="title_bg">
+            <dl class="rule">
+               <dt> <img src="./images/rule.png" alt=""> </dt> 
+               <dd>规则</dd>
+            </dl>
+        </div>
+        <div class="imgs_vote">
+        </div>
+        <div class="answer">
+            <div class="Answer">
+                <img src="./images/answerTry.png" alt="">
+            </div>
+            <div class="setAnswer">
+                <img src="./images/newAnswer.png" alt="">
+            </div>
+        </div>
+        <div class="revive">
+            <div class="revive_img"><img src="./images/card.png" alt=""></div>
+            <div class="revive_msg">
+                <p>复活卡 <b>0</b></p>
+                <p>手机答题专用</p>
+            </div>
+            <a href="javascript:;" class="revive_res">
+                获取
+            </a>
+        </div>
+        <div class="user_msg">
+            <div class="scroll">
+                中奖信息
+            </div>
+        </div>
+        <div class="answer_situation">
+        </div>
+        <div class="ad">
+            <div class="ad_swiper swiper-container">
+                <div class="swiper-wrapper ad_imgList">
+                    
+                </div>
+             
+            </div>
+            <h1 class="ad_Msg">
+                广告的内容文字广告的内容文字
+            </h1>
+        </div>
+        <div class="act">
+            <div class="act_title">
+                节目预告 <a href="../fenCai/index.html" class="more"">更多<img src="./images/return.png" alt=""></a>
+            </div>
+            <div class="act_cont">
+            </div>
+        </div>
+        <div class="program">
+            <div class="program_title">
+                往期节目内容 <a href="../program/index.html" class="more"">更多<img src="./images/return.png" alt=""></a>
+            </div>
+            <div class="program_cont">
+            </div>
+        </div>
+        <div class="ad_two">
+            <div class="ad_two_swiper swiper-container">
+                <div class="swiper-wrapper ad_two_imgList">
+                    
+                </div>
+                
+            </div>
+            <h1 class="ad_two_Msg">
+                广告的内容文字广告的内容文字
+            </h1>
+        </div>
+        <div class="titbits">
+            <div class="titbits_title">
+                花絮 <a href="../fenCai/index.html" class="more"">更多<img src="./images/return.png" alt=""></a>
+            </div>
+            <div class="titbits_cont">
+            </div>
+        </div>
+        <div class="custom">
+            <img src="./images/custom.png" alt="">联系客服
+        </div>
+    </div>
+    <div class="guize">
+        <span class="clock">X</span>
+        <img src="https://yshd-pic-oss.oss-cn-beijing.aliyuncs.com/images%2Fdatitu%2Fbsgz2.png" alt="">
+    </div>
+    <div class="wrap" id="wrap">
+        <div class="cont">
+            <div class="shop">购买</div>
+            <div class="yq">邀请好友</div>
+        </div>
+    </div>
+</body>
+<script src="../baoMing/layui-v2.3.0-rc1/layui/layui.all.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+<script src="./js/swiper.min.js"></script>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/index.js"></script>
+<script>
+    var _czc = _czc || [];
+    _czc.push(["_setAccount", "1274110688"]);
+    _czc.push(["_trackEvent",'页面打开','答题专区',new Date()]);//打开页面统计
+    var $ = layui.jquery;
+    var  token ='';
+    function get(){
+        if(/(LKHDAPP)/i.test(navigator.userAgent)){
+            if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+                token=YSHD.token;
+            }else if (/(Android)/i.test(navigator.userAgent)) {
+                token=window.LkhdWebView.getToken();
+            }
+        }else{
+            if(window.location.search.length>=10){
+                var href_ = window.location.search.split('?')[1].split('&');
+                for(var i=0;i<href_.length;i++){
+                    var item=href_[i].split('=');
+                    if(item[0]=="token"){
+                        token=item[1];
+                    }
+                }
+            }
+            
+        }
+    }
+    function alertstr(str){
+        token=str;
+	}
+    get();
+
+    //体验答题
+    $('.Answer').click(function () {
+        window.location.href = '../daTiDemo/index.html?token='+token;
+    })
+    //客服
+    $('.custom').click(function () {
+        window.location.href = '../kefu/index.html';
+    })
+    // 出题
+    $('.setAnswer').click(function () {
+        if (token ==undefined||token =='') {
+            if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)){
+                toke=YSHD.token
+            }else{
+                if(/(LKHDAPP)/i.test(navigator.userAgent)){
+                    token=window.LkhdWebView.getToken();
+                }
+            }
+            if(token ==undefined||token ==''){
+                gettoken_();
+            }else{
+                window.location.href = '../chuTi/index.html?token='+token;
+            }
+        } else {
+            window.location.href = '../chuTi/index.html?token='+token;
+        }
+    })
+
+    // 规则
+    $('.rule').click(function () {
+        $('.main').hide()
+        $('.guize').show()
+    })
+    $('.clock').click(function () { 
+        $('.guize').hide()
+        $('.main').show()
+    })
+
+    
+    function gettoken_(){
+        if (/(LKHDAPP)/i.test(navigator.userAgent)) {
+            layer.confirm('此功能需要登录，是否前往登录?', {icon: 3, title:'提示'}, function(index){
+            if(index){
+                if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+                    gettoken();
+                }else if (/(Android)/i.test(navigator.userAgent)) { 
+                    window.LkhdWebView.jumpToLogin();
+                }
+            }
+            layer.close(index);
+        });
+        } else {
+            layer.confirm('此功能需要登录，是否前往应用商店下载App?', {icon: 3, title:'提示'}, function(index){
+                if(index){
+                    window.location.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=com.lkhd&channel=0002160650432d595942&fromcase=60001'
+                }
+                layer.close(index);
+            });
+        }
+    }
+    
+</script>
+</html>

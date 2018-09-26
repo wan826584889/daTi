@@ -1,0 +1,136 @@
+@function n($a){
+    @return $a/46.875+rem;
+}
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+html,body{
+    width: 100%;
+    height: 100%; 
+    min-height: n(1300); 
+    text-decoration: none;
+}
+.box{
+    width:100%;
+    height:100%;
+    position: relative;
+    // background: url(../images/bg.png) no-repeat;
+    // background-size: 100% 100%;
+    background: -webkit-linear-gradient( bottom, #41c4e1,#4b95ee,#4b95ee,#4b95ee);
+    background: -o-linear-gradient( bottom, #41c4e1,#4b95ee,#4b95ee,#4b95ee);
+    background: -moz-linear-gradient( bottom, #41c4e1,#4b95ee,#4b95ee,#4b95ee);
+    background: linear-gradient(to  bottom, #41c4e1,#4b95ee,#4b95ee,#4b95ee);
+    .img{
+        width: 100%;
+        height: n(250);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.tuyi{
+    width: n(100);
+    height: n(50);
+    float: right;
+}
+.tuer{
+    width: n(100);
+    height: n(150);
+    position: absolute;
+    top: n(700);
+    left: 0;
+}
+.tusan{
+    width: n(40);
+    height: n(150);
+    position: absolute;
+    top: n(1000);
+    right: 0;
+}
+#test_banner{
+    width: 100%;
+    height: n(354) !important;
+    background: none;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.layui-carousel-ind{
+    ul{
+        background: none !important;
+        li{
+            background: #bfaed3;
+        }
+        .layui-this{
+            background: #ffdf41 !important;
+        }
+    }
+}
+.main{
+    width: 100%;
+    height: auto;
+    position: relative;
+    p{
+        float: left;
+        color: #fff;
+        font-weight: bold;
+        font-size: n(40);
+        box-shadow: n(0) n(15) n(30) n(15) rgba(0, 0, 0, 0.090);
+        border-radius:n(20);
+        &:nth-of-type(1){
+            display: none;
+        }
+        &:nth-of-type(2){
+            width: n(339);
+            height: n(224);
+            background: url(../images/baoming.png) no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: n(101);
+            left: n(30);
+        }
+        &:nth-of-type(3){
+            width: n(339);
+            height: n(224);
+            background: url(../images/toupian.png) no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: n(101);
+            right: n(30);
+        }
+        &:nth-of-type(4){
+            width: n(157);
+            height: n(154);
+            background: url(../images/fencai.png) no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: n(452);
+            left: n(80);
+        }
+        &:nth-of-type(5){
+            width: n(157);
+            height: n(154);
+            background: url(../images/chuti.png) no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: n(452);
+            left: n(290);
+        }
+        &:nth-of-type(6){
+            width: n(157);
+            height: n(154);
+            background: url(../images/kefu.png) no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: n(452);
+            left: n(496);
+        }
+    }
+}

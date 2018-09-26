@@ -1,0 +1,340 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  list-style: none;
+  overflow-y: hidden;
+}
+
+a:nth-of-type(1) {
+  display: none;
+}
+
+.box {
+  width: 100%;
+  height: auto;
+  min-height: 32rem;
+  padding-bottom: 0.85333rem;
+  background: -webkit-linear-gradient(bottom, #41c4e1, #4b95ee, #4b95ee, #4b95ee);
+  background: -o-linear-gradient(bottom, #41c4e1, #4b95ee, #4b95ee, #4b95ee);
+  background: -moz-linear-gradient(bottom, #41c4e1, #4b95ee, #4b95ee, #4b95ee);
+  background: linear-gradient(to bottom, #41c4e1, #4b95ee, #4b95ee, #4b95ee);
+}
+
+.btm {
+  position: fixed;
+  width: 100%;
+  height: 2.56rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(../images/bg2.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+.alert_share {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.595);
+}
+
+.alert_share .share {
+  width: 12.608rem;
+  height: 15.70133rem;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.alert_share .share img {
+  width: 100%;
+  height: 13.312rem;
+}
+
+.alert_share .share button {
+  width: 5.86667rem;
+  height: 1.792rem;
+  border: none;
+  outline: none;
+}
+
+.alert_share .share button:nth-of-type(1) {
+  margin-left: 0.32rem;
+}
+
+.alert_share .share button img {
+  width: 100%;
+  height: 100%;
+}
+
+.san {
+  widows: 100%;
+  display: none;
+}
+
+.san .top {
+  width: 100%;
+  height: 1.64267rem;
+  position: relative;
+}
+
+.san .top p:nth-of-type(1) {
+  font-size: 1.23733rem;
+  position: absolute;
+  top: 0.64rem;
+  left: 6.16533rem;
+  width: 4.032rem;
+  color: #fff;
+  font-family: '黑体';
+  font-weight: bold;
+}
+
+.san .top p:nth-of-type(2) {
+  font-size: 0.53333rem;
+  position: absolute;
+  top: 1.088rem;
+  right: 0.42667rem;
+  width: 4.032rem;
+  color: #fff;
+  font-family: '黑体';
+}
+
+.san .jindu {
+  width: 12.18133rem;
+  height: 0.55467rem;
+  border-radius: 0.64rem;
+  border: 0.064rem solid #1378a0;
+  margin-top: 1.06667rem;
+  margin-left: 0.98133rem;
+  position: relative;
+}
+
+.san .jindu .tiao {
+  width: 10%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #fff221;
+  border: 0.08533rem solid #3dadc9;
+  border-radius: 0.64rem;
+}
+
+.san .jindu .fen {
+  font-size: 0.55467rem;
+  color: #fff221;
+  position: absolute;
+  top: -0.064rem;
+  right: -1.49333rem;
+}
+
+.san .dati {
+  width: 14.016rem;
+  height: 12.97067rem;
+  padding: 1.70667rem 0;
+  margin: 2.38933rem auto 0;
+  background: #fff;
+  border-radius: 0.64rem;
+  position: relative;
+}
+
+.san .dati .yuan_box {
+  width: 2.92267rem;
+  height: 2.92267rem;
+  background: #fff;
+  position: absolute;
+  top: -1.28rem;
+  left: 5.568rem;
+  border-radius: 50%;
+}
+
+.san .dati .yuan_box .yuan {
+  width: 2.47467rem !important;
+  height: 2.47467rem !important;
+}
+
+.san .dati .yuan_box .yuan canvas {
+  width: 2.47467rem !important;
+  height: 2.47467rem !important;
+  font-size: 0.64rem !important;
+  margin-left: 0.21333rem;
+  margin-top: 0.21333rem;
+}
+
+.san .huida {
+  width: 12.13867rem;
+  height: 3.56267rem;
+  margin: 0 auto;
+}
+
+.san .huida .timu {
+  font-size: 0.78933rem;
+}
+
+.san .huida button {
+  width: 100%;
+  height: 2.048rem;
+  border: 1px solid #949494;
+  border-radius: 0.98133rem;
+  font-size: 0.59733rem;
+  text-align: left;
+  box-sizing: border-box;
+  color: #3e3e3e;
+  padding-left: 1.13067rem;
+  margin-bottom: 0.74667rem;
+  background-color: #fff;
+  position: relative;
+}
+
+.san .huida button img {
+  width: 0.98133rem;
+  height: 0.74667rem;
+  position: absolute;
+  right: 0.93867rem;
+  top: 0.64rem;
+  z-index: 3;
+}
+
+.san .huida button:nth-of-type(1) {
+  margin-top: 1.17333rem;
+}
+
+.san .alert_ {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background: rgba(0, 0, 0, 0.452);
+  display: none;
+}
+
+.san .alert_ .alert {
+  width: 13.93067rem;
+  height: 17.152rem;
+  margin: 4.07467rem auto 0;
+  background: #fff;
+  position: relative;
+  border-radius: 0.42667rem;
+}
+
+.san .alert_ .alert > img {
+  width: 2.24rem;
+  height: 2.21867rem;
+  border-radius: 50%;
+  margin-top: 0.72533rem;
+  margin-left: 5.888rem;
+}
+
+.san .alert_ .alert .user {
+  width: 100%;
+  height: auto;
+  color: #000;
+  font-size: 0.768rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0.42667rem 0;
+}
+
+.san .alert_ .alert .tongji {
+  width: 100%;
+  height: 1.472rem;
+  color: #5e5e5e;
+  font-size: 0.59733rem;
+  text-align: center;
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 1.32267rem;
+}
+
+.san .alert_ .alert .shu {
+  width: 100%;
+  height: 0.72533rem;
+  line-height: 0.768rem;
+  float: left;
+  margin-bottom: 0.896rem;
+}
+
+.san .alert_ .alert .shu img {
+  width: 0.68267rem;
+  height: 0.72533rem;
+  float: left;
+  margin-left: 1.30133rem;
+}
+
+.san .alert_ .alert .shu span {
+  float: left;
+  font-size: 0.64rem;
+  font-weight: bold;
+  color: #000;
+  margin-left: 0.21333rem;
+}
+
+.san .alert_ .alert .shu span:nth-of-type(2) {
+  float: right;
+  margin-right: 1.36533rem;
+}
+
+.san .alert_ .alert .shi {
+  width: 9.19467rem;
+  height: 2.048rem;
+  font-size: 0.85333rem;
+  color: #fff;
+  margin: 0 auto;
+  background: #53d8d5;
+  position: absolute;
+  bottom: 1.70667rem;
+  left: 2.34667rem;
+  border: none;
+  border-radius: 1.28rem;
+  outline: none;
+}
+
+.zqda {
+  position: absolute;
+  top: 3.79733rem;
+  left: 1.70667rem;
+  font-size: 1.25867rem;
+  color: #fff;
+}
+
+.jibai {
+  position: absolute;
+  top: 4.37333rem;
+  right: 1.36533rem;
+  color: #fff;
+  font-size: 0.55467rem;
+}
+
+.dui_color {
+  background: #ff6c38 !important;
+  color: #fff !important;
+}
+
+.dui_color img {
+  display: block !important;
+}
+
+.cuo_color {
+  background: #09b809 !important;
+  color: #fff !important;
+}
+
+button {
+  outline: none;
+}

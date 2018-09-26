@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./images/icon.png">
+    <link rel="stylesheet" href="./css/index.css">
+    <script>
+         document.documentElement.style.fontSize = document.documentElement.clientWidth / 16 + 'px';
+    </script>
+    <title>邀请好友</title>
+</head>
+<body>
+      <div class="box">
+          <div class="title">
+              <h1>复活卡使用规则</h1>
+              <p>答题过程中，当答错时需要使用复活卡才能继续闯关并参与瓜分当期奖金。没有或者不使用复活卡的，只能参加答题，不能闯关分奖金</p>
+          </div>
+      </div>
+      <footer>
+          <button id="left"></button>
+          <button id="right"></button>
+      </footer>
+</body>
+</html>
+<script>
+    left.onclick=function(){
+        share(0);//微信分享
+    }       
+
+    right.onclick=function(){        
+        share(1);//朋友圈
+    }
+    function share(num){
+        if (/(LKHDAPP)/i.test(navigator.userAgent)) {
+            if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+                shareForJs(num,"adchy");
+            }else if (/(Android)/i.test(navigator.userAgent)) { 
+                window.LkhdWebView.shareForJs(num,"adchy");
+            }
+        }
+    }
+</script>
